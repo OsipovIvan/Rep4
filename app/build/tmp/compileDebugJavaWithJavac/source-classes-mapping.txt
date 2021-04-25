@@ -1,0 +1,2 @@
+ru/osipov/nmediaapp/BuildConfig.java
+ ru.osipov.nmediaapp.BuildConfig
