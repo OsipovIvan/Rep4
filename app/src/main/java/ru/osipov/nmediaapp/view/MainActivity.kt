@@ -3,7 +3,6 @@ package ru.osipov.nmediaapp.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.annotation.NonNull
 import ru.osipov.nmediaapp.R
 import ru.osipov.nmediaapp.databinding.ActivityMainBinding
 import ru.osipov.nmediaapp.model.dto.Post
