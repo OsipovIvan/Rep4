@@ -1,2 +1,4 @@
+ru/osipov/nmediaapp/databinding/ActivityMainBinding.java
+ ru.osipov.nmediaapp.databinding.ActivityMainBinding
 ru/osipov/nmediaapp/BuildConfig.java
  ru.osipov.nmediaapp.BuildConfig

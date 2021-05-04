@@ -1031,6 +1031,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1300,6 +1301,8 @@ dimen hint_alpha_material_dark
 dimen hint_alpha_material_light
 dimen hint_pressed_alpha_material_dark
 dimen hint_pressed_alpha_material_light
+dimen icon_margin
+dimen icon_size_dimen
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
@@ -1332,6 +1335,7 @@ dimen material_input_text_to_prefix_suffix_padding
 dimen material_text_view_test_line_height
 dimen material_text_view_test_line_height_override
 dimen material_timepicker_dialog_buttons_margin_top
+dimen min_width_text_view
 dimen mtrl_alert_dialog_background_inset_bottom
 dimen mtrl_alert_dialog_background_inset_end
 dimen mtrl_alert_dialog_background_inset_start
@@ -1531,6 +1535,8 @@ dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
 dimen test_mtrl_calendar_day_cornerSize
+dimen title_avatar_dimen
+dimen title_margin_dimen
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -1641,6 +1647,10 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_baseline_favorite_border_24
+drawable ic_baseline_more_vert_24
+drawable ic_baseline_remove_red_eye_24
+drawable ic_baseline_share_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -1649,6 +1659,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_set_like_24_red
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1764,6 +1775,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id avatar_image_view
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -1811,6 +1823,7 @@ id decor_content_parent
 id default_activity_button
 id deltaRelative
 id dependency_ordering
+id description_text_view
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -1885,6 +1898,7 @@ id largeLabel
 id layout
 id left
 id leftToRight
+id like_image_button
 id line1
 id line3
 id linear
@@ -1910,6 +1924,7 @@ id material_timepicker_mode_button
 id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
+id menu_image_button
 id message
 id middle
 id mini
@@ -1952,6 +1967,9 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id number_of_likes_text_view
+id number_share
+id number_views
 id off
 id on
 id outline
@@ -1972,6 +1990,7 @@ id position
 id postLayout
 id progress_circular
 id progress_horizontal
+id publish_text_view
 id radio
 id ratio
 id rectangles
@@ -2005,6 +2024,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id share_image_button
 id shortcut
 id showCustom
 id showHome
@@ -2069,7 +2089,9 @@ id textinput_suffix_text
 id time
 id title
 id titleDividerNoCustom
+id title_barrier
 id title_template
+id title_text_view
 id toggle
 id top
 id topPanel
@@ -2088,6 +2110,10 @@ id unlabeled
 id up
 id useLogo
 id view_offset_helper
+id view_tree_lifecycle_owner
+id view_tree_saved_state_registry_owner
+id view_tree_view_model_store_owner
+id views_Image_button
 id visible
 id withText
 id withinBounds
@@ -2276,12 +2302,17 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string content_description_like_image_button
+string content_description_menu_button
+string content_description_share_image_button
+string content_description_user_avatar
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string icon_number_of_views
 string item_view_role_description
 string material_clock_display_divider
 string material_clock_toggle_content_description
@@ -3057,6 +3088,8 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style my_icon_style
+style my_text_view_for_icon_style
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

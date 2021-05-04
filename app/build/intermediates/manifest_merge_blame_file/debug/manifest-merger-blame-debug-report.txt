@@ -29,9 +29,9 @@
 20        android:testOnly="true"
 21        android:theme="@style/Theme.NMediaApp" >
 21-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:11:9-47
-22        <activity android:name="ru.osipov.nmediaapp.MainActivity" >
+22        <activity android:name="ru.osipov.nmediaapp.view.MainActivity" >
 22-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:12:9-18:20
-22-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:12:19-47
+22-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:12:19-52
 23            <intent-filter>
 23-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:13:13-17:29
 24                <action android:name="android.intent.action.MAIN" />
