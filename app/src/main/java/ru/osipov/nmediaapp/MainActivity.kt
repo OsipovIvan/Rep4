@@ -3,54 +3,34 @@ package ru.osipov.nmediaapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import ru.osipov.nmediaapp.adpter.PostAdapter
+import ru.osipov.nmediaapp.adpter.PostClickListener
 import ru.osipov.nmediaapp.databinding.ActivityMainBinding
 import ru.osipov.nmediaapp.dto.Post
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), PostClickListener {
+
+    private val mViewModel: PostViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val mViewModel: PostViewModel by viewModels()
+        val adapter = PostAdapter(this)
+
         mViewModel.data.observe(this, {
-            setupView(it, binding)
+            adapter.submitList(it)
         })
 
-        setupClickListener(binding, mViewModel)
+        binding.list.adapter = adapter
     }
 
-    private fun setupClickListener(
-        binding: ActivityMainBinding,
-        mViewModel: PostViewModel
-    ) {
-        with(binding){
-            likeImageButton.setOnClickListener {
-                mViewModel.like()
-            }
-
-            shareImageButton.setOnClickListener {
-                mViewModel.share()
-            }
-        }
+    override fun likeOnClickListener(post: Post) {
+        mViewModel.like(post.id)
     }
 
-    fun setupView(post: Post, binding: ActivityMainBinding) {
-
-        with(binding) {
-            titleTextView.text = post.author
-            publishTextView.text = post.published
-            descriptionTextView.text = post.content
-            numberOfLikesTextView.text = post.getLikes()
-            numberShare.text = post.getShare()
-            numberViews.text = post.views.toString()
-
-            if (post.likedByMe) {
-                likeImageButton.setImageResource(R.drawable.ic_set_like_24_red)
-            } else {
-                likeImageButton.setImageResource(R.drawable.ic_baseline_favorite_border_24)
-            }
-        }
+    override fun shareOnClickListener(post: Post) {
+        mViewModel.share(post.id)
     }
 }
