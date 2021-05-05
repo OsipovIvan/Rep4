@@ -2,11 +2,13 @@ package ru.osipov.nmediaapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import ru.osipov.nmediaapp.adpter.PostAdapter
 import ru.osipov.nmediaapp.adpter.PostClickListener
 import ru.osipov.nmediaapp.databinding.ActivityMainBinding
 import ru.osipov.nmediaapp.dto.Post
+import ru.osipov.nmediaapp.utils.AndroidUtils
 
 class MainActivity : AppCompatActivity(), PostClickListener {
 
@@ -24,6 +26,22 @@ class MainActivity : AppCompatActivity(), PostClickListener {
         })
 
         binding.list.adapter = adapter
+
+        binding.imageButtonPostList.setOnClickListener{
+            with(binding.editTextPostList){
+                if (text.isNullOrBlank()){
+                    Toast.makeText(this@MainActivity, context.getString(R.string.toast_not_content), Toast.LENGTH_LONG).show()
+                    return@setOnClickListener
+                }
+
+                mViewModel.changeContent(text.toString())
+                mViewModel.save()
+
+                clearFocus()
+                setText("")
+                AndroidUtils.hideKeyboard(this)
+            }
+        }
     }
 
     override fun likeOnClickListener(post: Post) {
