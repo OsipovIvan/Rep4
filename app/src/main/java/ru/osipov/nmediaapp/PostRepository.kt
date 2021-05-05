@@ -1,4 +1,4 @@
-package ru.osipov.nmediaapp.model
+package ru.osipov.nmediaapp
 
 import androidx.lifecycle.LiveData
 import ru.osipov.nmediaapp.dto.Post
@@ -7,7 +7,9 @@ interface PostRepository {
 
     fun getAll(): LiveData<List<Post>>
 
-    fun like(id: Long)
+    fun likeById(id: Long)
 
-    fun share(id: Long)
+    fun shareById(id: Long)
+
+    fun removeById(id: Long)
 }

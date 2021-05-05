@@ -27,10 +27,14 @@ class MainActivity : AppCompatActivity(), PostClickListener {
     }
 
     override fun likeOnClickListener(post: Post) {
-        mViewModel.like(post.id)
+        mViewModel.likeById(post.id)
     }
 
     override fun shareOnClickListener(post: Post) {
-        mViewModel.share(post.id)
+        mViewModel.shareById(post.id)
+    }
+
+    override fun removeOnClickListener(post: Post) {
+        mViewModel.removeById(post.id)
     }
 }

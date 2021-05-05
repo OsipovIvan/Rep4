@@ -6,4 +6,5 @@
     <string name="content_description_like_image_button">Icon Number of likes</string>
     <string name="content_description_share_image_button">Icon Number of share</string>
     <string name="icon_number_of_views">Icon Number of views</string>
+    <string name="string_post_remove">Remove</string>
 </resources>
