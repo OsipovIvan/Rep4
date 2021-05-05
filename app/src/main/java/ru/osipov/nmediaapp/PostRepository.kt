@@ -5,9 +5,9 @@ import ru.osipov.nmediaapp.dto.Post
 
 interface PostRepository {
 
-    fun get(): LiveData<Post>
+    fun getAll(): LiveData<List<Post>>
 
-    fun like()
+    fun like(id: Long)
 
-    fun share()
+    fun share(id: Long)
 }
