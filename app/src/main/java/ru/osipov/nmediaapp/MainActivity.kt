@@ -2,6 +2,7 @@ package ru.osipov.nmediaapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import ru.osipov.nmediaapp.adpter.PostAdapter
@@ -34,6 +35,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onEdit(post: Post) {
                 mViewModel.edit(post)
+                binding.editGroup.visibility = View.VISIBLE
             }
         })
 
@@ -65,5 +67,18 @@ class MainActivity : AppCompatActivity() {
                 setText(it.content)
             }
         })
+
+        binding.imageButtonCancelEdit.setOnClickListener {
+            with(binding.editTextPostList){
+
+                mViewModel.clear()
+
+                clearFocus()
+                setText("")
+                AndroidUtils.hideKeyboard(this)
+
+                binding.editGroup.visibility = View.GONE
+            }
+        }
     }
 }

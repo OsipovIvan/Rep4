@@ -11,4 +11,7 @@
     <string name="post_text">Post text</string>
     <string name="toast_not_content">Content can\'t be empty</string>
     <string name="string_post_edit">Edit</string>
+    <string name="icon_edit">Icon edit</string>
+    <string name="edit_post">Edit post</string>
+    <string name="edit_button">Cancel edit button</string>
 </resources>
