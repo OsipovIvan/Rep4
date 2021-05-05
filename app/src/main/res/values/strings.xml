@@ -10,4 +10,5 @@
     <string name="button_accept">Button accept</string>
     <string name="post_text">Post text</string>
     <string name="toast_not_content">Content can\'t be empty</string>
+    <string name="string_post_edit">Edit</string>
 </resources>

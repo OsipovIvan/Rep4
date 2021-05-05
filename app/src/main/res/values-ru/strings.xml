@@ -10,4 +10,5 @@
     <string name="button_accept">Кнопка принять</string>
     <string name="post_text">Текст статьи</string>
     <string name="toast_not_content">Введите текст</string>
+    <string name="string_post_edit">Редактировать</string>
 </resources>

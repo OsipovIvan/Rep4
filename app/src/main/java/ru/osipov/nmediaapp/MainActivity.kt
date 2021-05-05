@@ -10,16 +10,32 @@ import ru.osipov.nmediaapp.databinding.ActivityMainBinding
 import ru.osipov.nmediaapp.dto.Post
 import ru.osipov.nmediaapp.utils.AndroidUtils
 
-class MainActivity : AppCompatActivity(), PostClickListener {
-
-    private val mViewModel: PostViewModel by viewModels()
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val adapter = PostAdapter(this)
+        val mViewModel: PostViewModel by viewModels()
+
+        val adapter = PostAdapter(object : PostClickListener{
+            override fun onLike(post: Post) {
+                mViewModel.likeById(post.id)
+            }
+
+            override fun onShare(post: Post) {
+                mViewModel.shareById(post.id)
+            }
+
+            override fun onRemove(post: Post) {
+                mViewModel.removeById(post.id)
+            }
+
+            override fun onEdit(post: Post) {
+                mViewModel.edit(post)
+            }
+        })
 
         mViewModel.data.observe(this, {
             adapter.submitList(it)
@@ -42,17 +58,12 @@ class MainActivity : AppCompatActivity(), PostClickListener {
                 AndroidUtils.hideKeyboard(this)
             }
         }
-    }
 
-    override fun likeOnClickListener(post: Post) {
-        mViewModel.likeById(post.id)
-    }
-
-    override fun shareOnClickListener(post: Post) {
-        mViewModel.shareById(post.id)
-    }
-
-    override fun removeOnClickListener(post: Post) {
-        mViewModel.removeById(post.id)
+        mViewModel.edited.observe(this, {
+            with(binding.editTextPostList){
+                requestFocus()
+                setText(it.content)
+            }
+        })
     }
 }

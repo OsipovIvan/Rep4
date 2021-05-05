@@ -45,11 +45,11 @@ class PostViewHolder(
             }
 
             likeImageButton.setOnClickListener {
-                listener.likeOnClickListener(post)
+                listener.onLike(post)
             }
 
             shareImageButton.setOnClickListener {
-                listener.shareOnClickListener(post)
+                listener.onShare(post)
             }
 
             menuImageButton.setOnClickListener{
@@ -58,7 +58,11 @@ class PostViewHolder(
                     setOnMenuItemClickListener { menuItem ->
                         when(menuItem.itemId){
                             R.id.menu_remove_post -> {
-                                listener.removeOnClickListener(post)
+                                listener.onRemove(post)
+                                true
+                            }
+                            R.id.menu_edit_post ->{
+                                listener.onEdit(post)
                                 true
                             }
                             else ->{
@@ -74,9 +78,11 @@ class PostViewHolder(
 
 interface PostClickListener{
 
-    fun likeOnClickListener(post: Post)
+    fun onLike(post: Post)
 
-    fun shareOnClickListener(post: Post)
+    fun onShare(post: Post)
 
-    fun removeOnClickListener(post: Post)
+    fun onRemove(post: Post)
+
+    fun onEdit(post: Post)
 }
