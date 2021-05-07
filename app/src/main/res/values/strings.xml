@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">NMediaApp</string>
     <string name="nmedia">NMedia!</string>
+    <string name="content_description_user_avatar">User avatar</string>
+    <string name="content_description_menu_button">Menu button</string>
+    <string name="content_description_like_image_button">Icon Number of likes</string>
+    <string name="content_description_share_image_button">Icon Number of share</string>
+    <string name="icon_number_of_views">Icon Number of views</string>
+    <string name="string_post_remove">Remove</string>
+    <string name="button_accept">Button accept</string>
+    <string name="post_text">Post text</string>
+    <string name="toast_not_content">Content can\'t be empty</string>
+    <string name="string_post_edit">Edit</string>
+    <string name="icon_edit">Icon edit</string>
+    <string name="edit_post">Edit post</string>
+    <string name="edit_button">Cancel edit button</string>
 </resources>
