@@ -6,4 +6,12 @@
     <string name="content_description_like_image_button">Иконка количество лайков</string>
     <string name="content_description_share_image_button">Иконка поличество репостов</string>
     <string name="icon_number_of_views">Иконка количество просмотров</string>
+    <string name="string_post_remove">Удалить</string>
+    <string name="button_accept">Кнопка принять</string>
+    <string name="post_text">Текст статьи</string>
+    <string name="toast_not_content">Введите текст</string>
+    <string name="string_post_edit">Редактировать</string>
+    <string name="icon_edit">Иконка редактировать</string>
+    <string name="edit_post">Редактировать</string>
+    <string name="edit_button">Кнопка отмены редактирования</string>
 </resources>

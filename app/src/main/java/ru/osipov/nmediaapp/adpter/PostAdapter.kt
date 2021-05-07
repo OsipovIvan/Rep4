@@ -3,6 +3,7 @@ package ru.osipov.nmediaapp.adpter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.PopupMenu
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import ru.osipov.nmediaapp.R
@@ -44,11 +45,32 @@ class PostViewHolder(
             }
 
             likeImageButton.setOnClickListener {
-                listener.likeOnClickListener(post)
+                listener.onLike(post)
             }
 
             shareImageButton.setOnClickListener {
-                listener.shareOnClickListener(post)
+                listener.onShare(post)
+            }
+
+            menuImageButton.setOnClickListener{
+                PopupMenu(it.context, it).apply {
+                    inflate(R.menu.options_post)
+                    setOnMenuItemClickListener { menuItem ->
+                        when(menuItem.itemId){
+                            R.id.menu_remove_post -> {
+                                listener.onRemove(post)
+                                true
+                            }
+                            R.id.menu_edit_post ->{
+                                listener.onEdit(post)
+                                true
+                            }
+                            else ->{
+                                false
+                            }
+                        }
+                    }
+                }.show()
             }
         }
     }
@@ -56,7 +78,11 @@ class PostViewHolder(
 
 interface PostClickListener{
 
-    fun likeOnClickListener(post: Post)
+    fun onLike(post: Post)
 
-    fun shareOnClickListener(post: Post)
+    fun onShare(post: Post)
+
+    fun onRemove(post: Post)
+
+    fun onEdit(post: Post)
 }
