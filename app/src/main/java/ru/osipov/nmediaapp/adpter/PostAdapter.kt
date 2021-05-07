@@ -34,14 +34,16 @@ class PostViewHolder(
             titleTextView.text = post.author
             publishTextView.text = post.published
             descriptionTextView.text = post.content
-            numberOfLikesTextView.text = post.getLikes()
-            numberShare.text = post.getShare()
-            numberViews.text = post.views.toString()
+            likeImageButton.text = post.getLikes()
+            shareImageButton.text = post.getShare()
+            viewsImageButton.text = post.views.toString()
 
             if (post.likedByMe) {
-                likeImageButton.setImageResource(R.drawable.ic_set_like_24_red)
+                likeImageButton.setIconResource(R.drawable.ic_set_like_24_red)
+                likeImageButton.setIconTintResource(R.color.red)
             } else {
-                likeImageButton.setImageResource(R.drawable.ic_baseline_favorite_border_24)
+                likeImageButton.setIconResource(R.drawable.ic_baseline_favorite_border_24)
+                likeImageButton.setIconTintResource(R.color.grey)
             }
 
             likeImageButton.setOnClickListener {
