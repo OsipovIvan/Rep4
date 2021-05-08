@@ -38,13 +38,7 @@ class PostViewHolder(
             shareImageButton.text = post.getShare()
             viewsImageButton.text = post.views.toString()
 
-            if (post.likedByMe) {
-                likeImageButton.setIconResource(R.drawable.ic_set_like_24_red)
-                likeImageButton.setIconTintResource(R.color.red)
-            } else {
-                likeImageButton.setIconResource(R.drawable.ic_baseline_favorite_border_24)
-                likeImageButton.setIconTintResource(R.color.grey)
-            }
+            likeImageButton.isChecked = post.likedByMe
 
             likeImageButton.setOnClickListener {
                 listener.onLike(post)

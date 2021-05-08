@@ -51,6 +51,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/menu_image_button"
         style="@style/my_icon_style"
+        app:iconTint="@color/grey"
         android:layout_width="@dimen/icon_size_dimen"
         app:iconGravity="textStart"
         app:icon="@drawable/ic_baseline_more_vert_24"
@@ -83,7 +84,9 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/like_image_button"
         style="@style/my_icon_style"
-        app:icon="@drawable/ic_baseline_favorite_border_24"
+        android:checkable="true"
+        app:icon="@drawable/ic_like_24dp"
+        app:iconTint="@color/like_check_box_tint"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/description_text_view"
         tools:text="100"
@@ -94,6 +97,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/share_image_button"
         style="@style/my_icon_style"
+        app:iconTint="@color/grey"
         app:icon="@drawable/ic_baseline_share_24"
         app:layout_constraintStart_toEndOf="@+id/like_image_button"
         app:layout_constraintTop_toTopOf="@+id/like_image_button"
@@ -106,6 +110,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/views_Image_button"
         style="@style/my_icon_style"
+        app:iconTint="@color/grey"
         app:icon="@drawable/ic_baseline_remove_red_eye_24"
         app:layout_constraintTop_toTopOf="@+id/like_image_button"
         app:layout_constraintBottom_toBottomOf="@+id/like_image_button"
