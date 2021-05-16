@@ -13,7 +13,11 @@ class NewPostActivity : AppCompatActivity() {
 
         val binding = ActivityNewPostBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.editTextAddPost.requestFocus();
+        with(binding.editTextAddPost){
+            requestFocus()
+            setText(intent?.getStringExtra(Intent.EXTRA_TEXT))
+        }
+
         binding.addPost.setOnClickListener {
             val intent = Intent()
             if (binding.editTextAddPost.text.isNullOrBlank()) {

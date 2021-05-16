@@ -2,7 +2,8 @@ package ru.osipov.nmediaapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.result.launch
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.viewModels
 import ru.osipov.nmediaapp.activities.NewPostResultContract
 import ru.osipov.nmediaapp.adpter.PostAdapter
@@ -19,6 +20,13 @@ class MainActivity : AppCompatActivity() {
 
         val mViewModel: PostViewModel by viewModels()
 
+        val newPostLauncher = registerForActivityResult(NewPostResultContract()) { result ->
+            result ?: return@registerForActivityResult
+
+            mViewModel.changeContent(result)
+            mViewModel.save()
+        }
+
         val adapter = PostAdapter(object : PostClickListener{
             override fun onLike(post: Post) {
                 mViewModel.likeById(post.id)
@@ -34,6 +42,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onEdit(post: Post) {
                 mViewModel.edit(post)
+                launchNewPostActivity(mViewModel, newPostLauncher)
             }
         })
 
@@ -43,16 +52,13 @@ class MainActivity : AppCompatActivity() {
 
         binding.list.adapter = adapter
 
-
-        val newPostLauncher = registerForActivityResult(NewPostResultContract()) { result ->
-            result ?: return@registerForActivityResult
-
-            mViewModel.changeContent(result)
-            mViewModel.save()
-        }
-
         binding.fab.setOnClickListener {
-            newPostLauncher.launch()
+            launchNewPostActivity(mViewModel, newPostLauncher)
         }
+    }
+
+    fun launchNewPostActivity(mViewModel: PostViewModel, newPostLauncher: ActivityResultLauncher<String?>){
+        val post = mViewModel.getEdit()
+        newPostLauncher.launch(post?.content)
     }
 }
