@@ -81,6 +81,41 @@
         android:layout_marginTop="@dimen/title_margin_dimen"
         />
 
+    <ImageView
+        android:id="@+id/video_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toBottomOf="@+id/description_text_view"
+        app:layout_constraintBottom_toTopOf="@+id/like_image_button"
+        android:src="@android:color/holo_red_light"
+        android:contentDescription="@string/cd_play_image_button"
+        android:layout_marginTop="@dimen/title_margin_dimen"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/play_image_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        style="@style/my_icon_style"
+        app:icon="@drawable/ic_play_circle_24"
+        app:iconTint="@color/white"
+        android:clickable="false"
+        app:layout_constraintTop_toTopOf="@+id/video_image_view"
+        app:layout_constraintBottom_toBottomOf="@+id/video_image_view"
+        app:layout_constraintStart_toStartOf="@+id/video_image_view"
+        app:layout_constraintEnd_toEndOf="@+id/video_image_view"
+        android:contentDescription="@string/cd_play_image_button"
+        />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/video_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="play_image_button, video_image_view"
+        android:visibility="gone"
+        />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/like_image_button"
         style="@style/my_icon_style"
@@ -88,7 +123,7 @@
         app:icon="@drawable/ic_like_24dp"
         app:iconTint="@color/like_check_box_tint"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/video_image_view"
         tools:text="100"
         android:layout_marginTop="@dimen/title_margin_dimen"
         android:contentDescription="@string/content_description_like_image_button"
