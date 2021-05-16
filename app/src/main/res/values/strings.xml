@@ -14,4 +14,5 @@
     <string name="icon_edit">Icon edit</string>
     <string name="edit_post">Edit post</string>
     <string name="edit_button">Cancel edit button</string>
+    <string name="content_description_add_post_button">Add post button</string>
 </resources>

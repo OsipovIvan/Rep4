@@ -14,4 +14,5 @@
     <string name="icon_edit">Иконка редактировать</string>
     <string name="edit_post">Редактировать</string>
     <string name="edit_button">Кнопка отмены редактирования</string>
+    <string name="content_description_add_post_button">Кнопка добавить пост</string>
 </resources>

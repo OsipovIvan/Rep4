@@ -2,14 +2,13 @@ package ru.osipov.nmediaapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Toast
+import androidx.activity.result.launch
 import androidx.activity.viewModels
+import ru.osipov.nmediaapp.activities.NewPostResultContract
 import ru.osipov.nmediaapp.adpter.PostAdapter
 import ru.osipov.nmediaapp.adpter.PostClickListener
 import ru.osipov.nmediaapp.databinding.ActivityMainBinding
 import ru.osipov.nmediaapp.dto.Post
-import ru.osipov.nmediaapp.utils.AndroidUtils
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,7 +34,6 @@ class MainActivity : AppCompatActivity() {
 
             override fun onEdit(post: Post) {
                 mViewModel.edit(post)
-                binding.editGroup.visibility = View.VISIBLE
             }
         })
 
@@ -45,40 +43,16 @@ class MainActivity : AppCompatActivity() {
 
         binding.list.adapter = adapter
 
-        binding.imageButtonPostList.setOnClickListener{
-            with(binding.editTextPostList){
-                if (text.isNullOrBlank()){
-                    Toast.makeText(this@MainActivity, context.getString(R.string.toast_not_content), Toast.LENGTH_LONG).show()
-                    return@setOnClickListener
-                }
 
-                mViewModel.changeContent(text.toString())
-                mViewModel.save()
+        val newPostLauncher = registerForActivityResult(NewPostResultContract()) { result ->
+            result ?: return@registerForActivityResult
 
-                clearFocus()
-                setText("")
-                AndroidUtils.hideKeyboard(this)
-            }
+            mViewModel.changeContent(result)
+            mViewModel.save()
         }
 
-        mViewModel.edited.observe(this, {
-            with(binding.editTextPostList){
-                requestFocus()
-                setText(it.content)
-            }
-        })
-
-        binding.imageButtonCancelEdit.setOnClickListener {
-            with(binding.editTextPostList){
-
-                mViewModel.clear()
-
-                clearFocus()
-                setText("")
-                AndroidUtils.hideKeyboard(this)
-
-                binding.editGroup.visibility = View.GONE
-            }
+        binding.fab.setOnClickListener {
+            newPostLauncher.launch()
         }
     }
 }

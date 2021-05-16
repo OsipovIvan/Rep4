@@ -10,9 +10,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toTopOf="@+id/barrier_list_post"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,102 +19,18 @@
         app:layout_constraintVertical_bias="1.0"
         tools:listitem="@layout/card_post" />
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier_list_post"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:barrierDirection="top"
-        app:constraint_referenced_ids="edit_text_post_list, image_button_post_list, image_view_edit, text_view_edit, image_button_cancel_edit"
-        />
-
-    <ImageView
-        android:id="@+id/image_view_edit"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/barrier_list_post"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/view_decor"
-        app:layout_constraintEnd_toStartOf="@+id/text_view_edit"
-        android:src="@drawable/ic_baseline_edit_24"
-        app:layout_constraintHorizontal_weight="1"
-        android:padding="@dimen/icon_margin"
-        android:contentDescription="@string/icon_edit" />
-
-    <TextView
-        android:id="@+id/text_view_edit"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintStart_toEndOf="@id/image_view_edit"
-        app:layout_constraintBottom_toTopOf="@+id/view_decor"
-        app:layout_constraintTop_toTopOf="@+id/barrier_list_post"
-        app:layout_constraintEnd_toStartOf="@+id/image_button_cancel_edit"
-        app:layout_constraintHorizontal_weight="5"
-        android:paddingHorizontal="@dimen/small_padding"
-        android:text="@string/edit_post"
-        android:gravity="center_vertical"
-        />
-
-    <ImageButton
-        android:id="@+id/image_button_cancel_edit"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_margin="@dimen/icon_margin"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/view_decor"
-        app:layout_constraintTop_toBottomOf="@+id/barrier_list_post"
-        app:layout_constraintStart_toEndOf="@+id/text_view_edit"
-        app:layout_constraintHorizontal_weight="1"
-        android:src="@drawable/ic_cancel_30"
-        android:background="@android:color/transparent"
-        android:padding="@dimen/icon_margin"
-        android:contentDescription="@string/edit_button" />
-
-    <View
-        android:id="@+id/view_decor"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/grey"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/edit_text_post_list"
-        />
-
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/edit_group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="image_view_edit, text_view_edit, image_button_cancel_edit, view_decor"
-        android:visibility="gone"
-        />
-
-    <EditText
-        android:id="@+id/edit_text_post_list"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:minHeight="@dimen/edit_text_size"
-        app:layout_constraintHorizontal_weight="6"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/image_button_post_list"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_decor"
-        android:background="@android:color/transparent"
-        android:hint="@string/post_text"
-        android:inputType="textMultiLine"
-        android:importantForAutofill="no"
-        android:maxLines="6"
+        android:focusable="true"
+        app:srcCompat="@drawable/ic_add_24"
+        android:contentDescription="@string/button_accept"
         />
-
-    <ImageButton
-        android:id="@+id/image_button_post_list"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/edit_text_size"
-        android:padding="@dimen/icon_margin"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/edit_text_post_list"
-        app:layout_constraintTop_toBottomOf="@id/view_decor"
-        android:src="@drawable/ic_accept_30"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/button_accept" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
