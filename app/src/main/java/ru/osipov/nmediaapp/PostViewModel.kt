@@ -42,8 +42,8 @@ class PostViewModel: ViewModel() {
         }
     }
 
-    fun clear(){
-        edited.value  = empty
+    fun getEdit(): Post?{
+        return edited.value
     }
 
     fun likeById(id: Long) = repository.likeById(id)

@@ -1,7 +1,10 @@
 package ru.osipov.nmediaapp.adpter
 
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.PopupMenu
 import androidx.recyclerview.widget.ListAdapter
@@ -37,6 +40,15 @@ class PostViewHolder(
             likeImageButton.text = post.getLikes()
             shareImageButton.text = post.getShare()
             viewsImageButton.text = post.views.toString()
+            val video = post.video
+            if (video.isNotEmpty()){
+                videoGroup.visibility = View.VISIBLE
+                videoImageView.setOnClickListener {
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(video))
+                    val context = it.context
+                    context.startActivity(intent)
+                }
+            }
 
             likeImageButton.isChecked = post.likedByMe
 

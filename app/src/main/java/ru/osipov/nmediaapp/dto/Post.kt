@@ -8,7 +8,8 @@ data class Post(
     var likes: Int = 0,
     var likedByMe: Boolean = false,
     var share: Int = 0,
-    var views: Int = 0
+    var views: Int = 0,
+    var video: String = ""
 ){
 
     fun getLikes() = numberToString(likes)
