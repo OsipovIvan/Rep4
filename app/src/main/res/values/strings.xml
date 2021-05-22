@@ -16,4 +16,5 @@
     <string name="edit_button">Cancel edit button</string>
     <string name="content_description_add_post_button">Add post button</string>
     <string name="cd_play_image_button">Play video</string>
+    <string name="error_empty_content" >Error</string>
 </resources>

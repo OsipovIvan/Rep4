@@ -1,4 +1,4 @@
-package ru.osipov.nmediaapp
+package ru.osipov.nmediaapp.model
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

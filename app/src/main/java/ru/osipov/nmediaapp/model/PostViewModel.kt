@@ -1,9 +1,10 @@
-package ru.osipov.nmediaapp
+package ru.osipov.nmediaapp.model
 
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import ru.osipov.nmediaapp.dto.Post
+import ru.osipov.nmediaapp.model.PostRepositoryInMemoryImpl
 
 private val empty = Post(
     id = 0,

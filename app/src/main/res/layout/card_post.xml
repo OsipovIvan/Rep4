@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:paddingTop="@dimen/title_margin_dimen"
     android:paddingBottom="@dimen/title_margin_dimen"
-    tools:context=".MainActivity">
+    tools:context=".activities.FeedFragment">
 
     <ImageView
         android:id="@+id/avatar_image_view"

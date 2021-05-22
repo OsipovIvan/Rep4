@@ -10,3 +10,4 @@ object AndroidUtils{
         imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 }
+

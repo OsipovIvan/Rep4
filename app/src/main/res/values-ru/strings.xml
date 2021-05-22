@@ -16,4 +16,5 @@
     <string name="edit_button">Кнопка отмены редактирования</string>
     <string name="content_description_add_post_button">Кнопка добавить пост</string>
     <string name="cd_play_image_button">Запустить видео</string>
+    <string name="error_empty_content" >Ошибка</string>
 </resources>
