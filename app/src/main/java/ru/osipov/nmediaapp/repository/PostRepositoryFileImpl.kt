@@ -24,6 +24,12 @@ class PostRepositoryFileImpl(
             context.openFileInput(filename).bufferedReader().use {
                 posts = gson.fromJson(it, type)
                 data.value = posts
+                posts.forEach { post ->
+                    val id = post.id
+                    if (id >= nextId) {
+                        nextId = id + 1
+                    }
+                }
             }
         } else {
             data.value = emptyList<Post>()
