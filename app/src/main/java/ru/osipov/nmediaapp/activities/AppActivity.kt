@@ -22,7 +22,7 @@ class AppActivity : AppCompatActivity() {
             }
             intent.removeExtra(Intent.EXTRA_TEXT)
             findNavController(R.id.nav_host_fragment).navigate(
-                R.id.action_feedFragment2_to_newPostFragment,
+                R.id.action_postFragment_to_newPostFragment3,
                 Bundle().apply {
                     textArg = text
                 }

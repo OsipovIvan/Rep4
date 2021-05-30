@@ -14,12 +14,18 @@ import ru.osipov.nmediaapp.adpter.PostClickListener
 import ru.osipov.nmediaapp.databinding.FragmentFeedBinding
 import ru.osipov.nmediaapp.dto.Post
 import ru.osipov.nmediaapp.model.PostViewModel
+import ru.osipov.nmediaapp.utils.CONTENT_POST_KEY
+import ru.osipov.nmediaapp.utils.LongArg
 
 class FeedFragment : Fragment() {
 
-    private val viewModel: PostViewModel by viewModels(
+    private val mViewModel: PostViewModel by viewModels(
         ownerProducer = ::requireParentFragment
     )
+
+    companion object {
+        var Bundle.longArg: Long? by LongArg
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,8 +37,6 @@ class FeedFragment : Fragment() {
             container,
             false
         )
-
-        val mViewModel: PostViewModel by viewModels()
 
         val newPostLauncher = registerForActivityResult(NewPostResultContract()) { result ->
             result ?: return@registerForActivityResult
@@ -56,7 +60,15 @@ class FeedFragment : Fragment() {
 
             override fun onEdit(post: Post) {
                 mViewModel.edit(post)
-                launchNewPostActivity(mViewModel, newPostLauncher)
+                findNavController().navigate(R.id.action_feedFragment2_to_newPostFragment3, Bundle().apply {
+                    putString(CONTENT_POST_KEY, post.content)
+                })
+            }
+
+            override fun navigate(post: Post) {
+                findNavController().navigate(R.id.action_feedFragment2_to_postFragment, Bundle().apply {
+                    longArg = post.id
+                })
             }
         })
 
@@ -67,7 +79,7 @@ class FeedFragment : Fragment() {
         binding.list.adapter = adapter
 
         binding.fab.setOnClickListener {
-            findNavController().navigate(R.id.action_feedFragment2_to_newPostFragment)
+            findNavController().navigate(R.id.action_feedFragment2_to_newPostFragment3)
         }
 
         return binding.root
