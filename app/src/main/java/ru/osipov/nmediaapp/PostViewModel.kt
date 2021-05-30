@@ -1,9 +1,12 @@
 package ru.osipov.nmediaapp
 
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import ru.osipov.nmediaapp.dto.Post
+import ru.osipov.nmediaapp.repository.PostRepositoryFileImpl
+import ru.osipov.nmediaapp.repository.PostRepositoryInMemoryImpl
 
 private val empty = Post(
     id = 0,
@@ -13,9 +16,9 @@ private val empty = Post(
     published = ""
 )
 
-class PostViewModel: ViewModel() {
+class PostViewModel(application: Application): AndroidViewModel(application) {
 
-    private val repository = PostRepositoryInMemoryImpl()
+    private val repository = PostRepositoryFileImpl(application)
 
     val data = repository.getAll()
     val edited = MutableLiveData<Post>(empty)
