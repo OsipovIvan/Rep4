@@ -11,7 +11,7 @@
 9-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:5:5-19:19
+11-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:5:5-25:19
 12        android:allowBackup="true"
 12-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -29,20 +29,34 @@
 20        android:testOnly="true"
 21        android:theme="@style/Theme.NMediaApp" >
 21-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:11:9-47
-22        <activity android:name="ru.osipov.nmediaapp.MainActivity" >
-22-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:12:9-18:20
-22-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:12:19-47
+22        <activity android:name="ru.osipov.nmediaapp.activities.AppActivity" >
+22-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:12:9-24:20
+22-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:12:19-57
 23            <intent-filter>
-23-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:13:13-17:29
+23-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:13:13-16:29
 24                <action android:name="android.intent.action.MAIN" />
 24-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:14:17-69
 24-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:14:25-66
 25
 26                <category android:name="android.intent.category.LAUNCHER" />
-26-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:16:17-77
-26-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:16:27-74
+26-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:15:17-77
+26-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:15:27-74
 27            </intent-filter>
-28        </activity>
-29    </application>
+28            <intent-filter>
+28-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:18:13-22:29
+29                <action android:name="android.intent.action.SEND" />
+29-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:19:17-68
+29-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:19:25-66
 30
-31</manifest>
+31                <category android:name="android.intent.category.DEFAULT" />
+31-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:20:17-75
+31-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:20:27-73
+32
+33                <data android:mimeType="text/plain" />
+33-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:21:17-54
+33-->C:\Users\Admin\Desktop\AndroidNetology\app\src\main\AndroidManifest.xml:21:23-52
+34            </intent-filter>
+35        </activity>
+36    </application>
+37
+38</manifest>

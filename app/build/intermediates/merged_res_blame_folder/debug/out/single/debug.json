@@ -1,7 +1,87 @@
 [
     {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_main.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\navigation\\nav_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_remove_red_eye_24.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\drawable\\ic_baseline_remove_red_eye_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_like_24dp.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\drawable\\ic_like_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_favorite_border_24.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\drawable\\ic_baseline_favorite_border_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_play_circle_24.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\drawable\\ic_play_circle_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\layout_app_activity.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\layout\\app_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_cancel_30.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\drawable\\ic_cancel_30.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_share_24.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\drawable\\ic_baseline_share_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add_24.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\drawable\\ic_add_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_accept_30.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\drawable\\ic_accept_30.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\menu_options_post.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\menu\\options_post.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\color_like_check_box_tint.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\color\\like_check_box_tint.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_new_post.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\layout\\fragment_new_post.xml"
+    },
+    {
         "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_edit_24.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\drawable\\ic_baseline_edit_24.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
@@ -12,44 +92,40 @@
         "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\layout_card_post.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\layout\\card_post.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_check_24.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\drawable\\ic_check_24.xml"
     },
     {
-        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_set_like_24_red.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\drawable\\ic_set_like_24_red.xml"
     },
     {
-        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_feed.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\layout\\fragment_feed.xml"
     },
     {
-        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
-        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_more_vert_24.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\drawable\\ic_baseline_more_vert_24.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_post.xml.flat",
+        "source": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\src\\main\\res\\layout\\fragment_post.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\Desktop\\AndroidNetology\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",

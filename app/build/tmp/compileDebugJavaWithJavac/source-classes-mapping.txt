@@ -1,2 +1,12 @@
+ru/osipov/nmediaapp/databinding/FragmentNewPostBinding.java
+ ru.osipov.nmediaapp.databinding.FragmentNewPostBinding
+ru/osipov/nmediaapp/databinding/FragmentPostBinding.java
+ ru.osipov.nmediaapp.databinding.FragmentPostBinding
+ru/osipov/nmediaapp/databinding/CardPostBinding.java
+ ru.osipov.nmediaapp.databinding.CardPostBinding
+ru/osipov/nmediaapp/databinding/AppActivityBinding.java
+ ru.osipov.nmediaapp.databinding.AppActivityBinding
 ru/osipov/nmediaapp/BuildConfig.java
  ru.osipov.nmediaapp.BuildConfig
+ru/osipov/nmediaapp/databinding/FragmentFeedBinding.java
+ ru.osipov.nmediaapp.databinding.FragmentFeedBinding

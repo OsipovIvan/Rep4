@@ -19,11 +19,18 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.NMediaApp" >
-        <activity android:name="ru.osipov.nmediaapp.MainActivity" >
+        <activity android:name="ru.osipov.nmediaapp.activities.AppActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
     </application>
