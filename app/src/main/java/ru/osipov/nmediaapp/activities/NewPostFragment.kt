@@ -1,7 +1,5 @@
 package ru.osipov.nmediaapp.activities
 
-import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,15 +10,12 @@ import androidx.navigation.fragment.findNavController
 import ru.osipov.nmediaapp.databinding.FragmentNewPostBinding
 import ru.osipov.nmediaapp.model.PostViewModel
 import ru.osipov.nmediaapp.utils.AndroidUtils
-import ru.osipov.nmediaapp.utils.StringArg
+import ru.osipov.nmediaapp.utils.CONTENT_POST_KEY
 
 class NewPostFragment : Fragment() {
 
-    companion object {
-        var Bundle.textArg: String? by StringArg
-    }
 
-    private val viewModel: PostViewModel by viewModels(
+    private val mViewModel: PostViewModel by viewModels(
         ownerProducer = ::requireParentFragment
     )
 
@@ -35,20 +30,21 @@ class NewPostFragment : Fragment() {
             false
         )
 
-        with(binding.editTextAddPost){
+        with(binding.editTextAddPost) {
             requestFocus()
-//            setText(intent?.getStringExtra(android.content.Intent.EXTRA_TEXT))
+
+            arguments?.let {
+                this.setText(it.getString(CONTENT_POST_KEY))
+            }
         }
 
+
         binding.addPost.setOnClickListener {
-            viewModel.changeContent(binding.editTextAddPost.text.toString())
-            viewModel.save()
+            mViewModel.changeContent(binding.editTextAddPost.text.toString())
+            mViewModel.save()
             AndroidUtils.hideKeyboard(requireView())
             findNavController().navigateUp()
         }
-
-        arguments?.textArg
-            ?.let(binding.editTextAddPost::setText)
 
 
         return binding.root

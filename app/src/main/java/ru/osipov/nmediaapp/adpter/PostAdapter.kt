@@ -80,6 +80,9 @@ class PostViewHolder(
                     }
                 }.show()
             }
+            root.setOnClickListener {
+                listener.navigate(post)
+            }
         }
     }
 }
@@ -93,4 +96,6 @@ interface PostClickListener{
     fun onRemove(post: Post)
 
     fun onEdit(post: Post)
+
+    fun navigate(post: Post)
 }
