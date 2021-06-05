@@ -6,7 +6,6 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import ru.osipov.nmediaapp.db.AppDb
 import ru.osipov.nmediaapp.dto.Post
-import ru.osipov.nmediaapp.repository.PostRepositoryFileImpl
 import ru.osipov.nmediaapp.repository.PostRepositorySQLiteImpl
 
 private val empty = Post(
@@ -18,6 +17,9 @@ private val empty = Post(
 )
 
 class PostViewModel(application: Application): AndroidViewModel(application) {
+
+    private var buffer: String? = null
+
 
     private val repository = PostRepositorySQLiteImpl(
         AppDb.getInstance(application).postDao
@@ -57,4 +59,13 @@ class PostViewModel(application: Application): AndroidViewModel(application) {
     fun shareById(id: Long) = repository.shareById(id)
 
     fun removeById(id: Long) = repository.removeById(id)
+
+    fun getBuffer(): String?{
+        return buffer
+    }
+
+    fun setBuffer(text: String?) {
+        this.buffer = text
+    }
+
 }

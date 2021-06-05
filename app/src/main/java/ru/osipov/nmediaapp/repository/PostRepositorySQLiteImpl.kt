@@ -32,7 +32,7 @@ class PostRepositorySQLiteImpl(
     }
 
     override fun removeById(id: Long) {
-        val posts = dao.removeById(id)
+        posts = dao.removeById(id)
         data.value = posts
     }
 
