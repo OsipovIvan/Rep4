@@ -4,10 +4,10 @@ package ru.osipov.nmediaapp.model
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import ru.osipov.nmediaapp.db.AppDb
 import ru.osipov.nmediaapp.dto.Post
 import ru.osipov.nmediaapp.repository.PostRepositoryFileImpl
-import ru.osipov.nmediaapp.repository.PostRepositoryInMemoryImpl
-import ru.osipov.nmediaapp.model.PostRepositoryInMemoryImpl
+import ru.osipov.nmediaapp.repository.PostRepositorySQLiteImpl
 
 private val empty = Post(
     id = 0,
@@ -19,10 +19,12 @@ private val empty = Post(
 
 class PostViewModel(application: Application): AndroidViewModel(application) {
 
-    private val repository = PostRepositoryFileImpl(application)
+    private val repository = PostRepositorySQLiteImpl(
+        AppDb.getInstance(application).postDao
+    )
 
     val data = repository.getAll()
-    val edited = MutableLiveData<Post>(empty)
+    private val edited = MutableLiveData(empty)
 
     fun save(){
         edited.value?.let {

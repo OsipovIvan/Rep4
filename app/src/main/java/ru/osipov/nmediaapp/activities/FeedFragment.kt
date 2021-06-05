@@ -84,9 +84,4 @@ class FeedFragment : Fragment() {
 
         return binding.root
     }
-
-    fun launchNewPostActivity(mViewModel: PostViewModel, newPostLauncher: ActivityResultLauncher<String?>){
-        val post = mViewModel.getEdit()
-        newPostLauncher.launch(post?.content)
-    }
 }
