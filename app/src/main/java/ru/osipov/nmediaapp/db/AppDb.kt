@@ -6,12 +6,13 @@ import android.database.sqlite.SQLiteDatabase
 class AppDb private constructor(db: SQLiteDatabase){
     val postDao: PostDao = PostDaoImpl(db)
 
-    companion object{
+    companion object {
         private var instance: AppDb? = null
 
-        fun getInstance(context: Context): AppDb{
-            return instance ?: synchronized(this){
+        fun getInstance(context: Context): AppDb {
+            return instance ?: synchronized(this) {
                 instance ?: AppDb(buildDataBase(context, arrayOf(PostDaoImpl.DDL)))
+                    .apply { instance = this }
             }
         }
 
