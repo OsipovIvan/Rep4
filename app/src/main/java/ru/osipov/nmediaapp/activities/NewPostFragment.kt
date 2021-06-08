@@ -31,7 +31,7 @@ class NewPostFragment : Fragment() {
             false
         )
 
-        val callback = requireActivity().onBackPressedDispatcher.addCallback(getViewLifecycleOwner()) {
+        var callback = requireActivity().onBackPressedDispatcher.addCallback(getViewLifecycleOwner()) {
             mViewModel.setBuffer(binding.editTextAddPost.text.toString())
             findNavController().popBackStack()
         }
@@ -43,6 +43,10 @@ class NewPostFragment : Fragment() {
                 this.setText(it.getString(CONTENT_POST_KEY))
                 mViewModel.setBuffer(null)
                 callback.remove()
+                callback = requireActivity().onBackPressedDispatcher.addCallback(getViewLifecycleOwner()) {
+                    mViewModel.editEmpty()
+                    findNavController().popBackStack()
+                }
             }
 
             mViewModel.getBuffer()?.let {

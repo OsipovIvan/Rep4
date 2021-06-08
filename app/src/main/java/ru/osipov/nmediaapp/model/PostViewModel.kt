@@ -1,6 +1,5 @@
 package ru.osipov.nmediaapp.model
 
-
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
@@ -49,8 +48,8 @@ class PostViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    fun getEdit(): Post?{
-        return edited.value
+    fun editEmpty(){
+        edited.value = empty
     }
 
     fun likeById(id: Long) = repository.likeById(id)
