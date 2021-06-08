@@ -1,12 +1,11 @@
 package ru.osipov.nmediaapp.model
 
-
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import ru.osipov.nmediaapp.db.AppDb
 import ru.osipov.nmediaapp.dto.Post
-import ru.osipov.nmediaapp.repository.PostRepositorySQLiteImpl
+import ru.osipov.nmediaapp.room.AppDb
+import ru.osipov.nmediaapp.room.PosRepositoryRoomImpl
 
 private val empty = Post(
     id = 0,
@@ -20,9 +19,8 @@ class PostViewModel(application: Application): AndroidViewModel(application) {
 
     private var buffer: String? = null
 
-
-    private val repository = PostRepositorySQLiteImpl(
-        AppDb.getInstance(application).postDao
+    private val repository : PosRepositoryRoomImpl = PosRepositoryRoomImpl(
+       AppDb.getInstance(application).postDao()
     )
 
     val data = repository.getAll()
@@ -50,8 +48,8 @@ class PostViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    fun getEdit(): Post?{
-        return edited.value
+    fun editEmpty(){
+        edited.value = empty
     }
 
     fun likeById(id: Long) = repository.likeById(id)
