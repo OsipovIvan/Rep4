@@ -9,10 +9,8 @@ import android.view.ViewGroup
 import android.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import ru.osipov.nmediaapp.R
-import ru.osipov.nmediaapp.activities.AppActivity.Companion.textArg
 import ru.osipov.nmediaapp.adpter.PostClickListener
 import ru.osipov.nmediaapp.databinding.FragmentPostBinding
 import ru.osipov.nmediaapp.dto.Post
@@ -72,10 +70,10 @@ class PostFragment : Fragment() {
                 }
             }
 
-            mViewModel.data.observe(viewLifecycleOwner, {
-                it.first {
-                    it.id == id
-                }.let { post ->
+            mViewModel.data.observe(viewLifecycleOwner, { list ->
+                list.firstOrNull { post ->
+                    post.id == id
+                }?.let { post ->
                     binding.apply {
                         titleTextView.text = post.author
                         publishTextView.text = post.published
@@ -86,9 +84,9 @@ class PostFragment : Fragment() {
                         val video = post.video
                         if (video.isNotEmpty()) {
                             videoGroup.visibility = View.VISIBLE
-                            videoImageView.setOnClickListener {
+                            videoImageView.setOnClickListener { view ->
                                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse(video))
-                                val context = it.context
+                                val context = view.context
                                 context.startActivity(intent)
                             }
                         }
@@ -103,8 +101,8 @@ class PostFragment : Fragment() {
                             listener.onShare(post)
                         }
 
-                        menuImageButton.setOnClickListener {
-                            PopupMenu(it.context, it).apply {
+                        menuImageButton.setOnClickListener { view ->
+                            PopupMenu(view.context, view).apply {
                                 inflate(R.menu.options_post)
                                 setOnMenuItemClickListener { menuItem ->
                                     when (menuItem.itemId) {
